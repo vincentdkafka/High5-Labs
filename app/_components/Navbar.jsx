@@ -5,25 +5,28 @@ import React from "react";
 
 const Navbar = () => {
   return (
-    <div className="w-full bg-[#FEFBF6]">
-      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 h-20">
-        <Image 
-        src="/Logo2.png"
-        width={40}
-        height={40}
-        alt="logo"/>
+    <div className="w-full bg-[#FEFBF6] ">
+      <div className="flex justify-between mx-40 py-6 border-b-2 border-black">
+        <div>
+          <Image src="/Logo2.png" width={50} height={50} alt="right side" />
+        </div>
 
-
-    
-        <div className="hidden md:flex gap-8 text-sm font-medium">
-          <ul className="hidden md:flex gap-8 font-medium text-black">
-          <Link href="/"><li className="cursor-pointer hover:scale-105">Home</li></Link>
-          <Link href="/projects"><li className="cursor-pointer hover:scale-105">About</li></Link>
-          <Link href="/services"><li className="cursor-pointer hover:scale-105">Project</li></Link>
-          <Link href="/about"><li className="cursor-pointer hover:scale-105">Services</li></Link>
-          <Link href="/contact"><li className="cursor-pointer hover:scale-105">Contact</li></Link>
-            <Button>click here</Button>
-        </ul>
+        <div>
+          <ul className="flex items-center gap-16 font-normal text-lg text-black">
+            <Link href="/">
+              <li className="cursor-pointer">Home</li>
+            </Link>
+            <Link href="/projects">
+              <li className="cursor-pointer">Projects</li>
+            </Link>
+            <Link href="/services">
+              <li className="cursor-pointer ">Services</li>
+            </Link>
+            <Link href="/about">
+              <li className="cursor-pointer ">About</li>
+            </Link>
+            <Button className="rounded-4xl w-32 h-10 font-normal text-lg">Let's Talk</Button>
+          </ul>
         </div>
       </div>
     </div>
