@@ -3,32 +3,32 @@ import { ArrowUpRight, Tag } from "lucide-react";
 
 const projects = [
   {
-    title: "eYoga",
-    description: "A revamped and dynamic approach to yoga analytics",
-    image:
-      "https://images.unsplash.com/photo-1575052814086-f385e2e2ad1b?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Discovery", "Brand Guidelines", "Yoga"],
+    title: "AI SaaS App",
+    description:
+      "A full-stack AI-powered SaaS platform built on the PERN stack with OpenAI and ClipDrop integrations. Features include image generation, resume review, secure Clerk authentication, and a responsive React + Tailwind UI.",
+    image: "/1.png",
+    tags: ["React", "Node.js", "PostgreSQL", "OpenAI", "Clerk"],
   },
   {
-    title: "Nike React",
-    description: "Rewriting sport's playbook for billions of athletes",
-    image:
-      "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Brand Strategy", "Visual Identity"],
+    title: "CALC-AI",
+    description:
+      "An intelligent AI calculator that understands mathematical problems in text and image form, solves them symbolically and numerically, and renders beautifully formatted results using MathJax.",
+    image: "/2.png",
+    tags: ["Python", "TypeScript", "React", "MathJax", "Tailwind CSS"],
   },
   {
-    title: "Day Spa",
-    description: "Designing a new cocktail can",
-    image:
-      "https://images.unsplash.com/photo-1649999920973-ab6bfd0c0017?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Brand Strategy", "Visual Identity"],
+    title: "Jobfit-AI",
+    description:
+      "An AI-powered mock interview platform with voice-based interviews, real-time grading, and performance feedback. Built using Next.js, Tailwind CSS, Shadcn UI, and Google authentication.",
+    image: "/3.png",
+    tags: ["Next.js", "Google Auth", "Vapi AI", "Tailwind CSS"],
   },
   {
-    title: "Diamond Dynamics",
-    description: "From cutting-edge equipment to stylish apparel",
-    image:
-      "https://images.unsplash.com/photo-1528291954423-c0c71c12baeb?q=80&w=1200&auto=format&fit=crop",
-    tags: ["Sports Gear", "Equipment", "Discovery"],
+    title: "Outerstella – Drive Clone",
+    description:
+      "A modern cloud storage platform inspired by Google Drive, allowing file upload, organization, sharing, 100MB free storage, and OTP verification using Next.js and Appwrite.",
+    image: "/outerstella.png",
+    tags: ["Next.js", "Appwrite", "Node.js", "Tailwind CSS"],
   },
 ];
 
