@@ -9,7 +9,7 @@ const expectations = [
 
 const HireUs = () => {
   return (
-    <section className="py-24 bg-[#FEFBF6]">
+    <section id="contact" className="py-24 bg-[#FEFBF6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           

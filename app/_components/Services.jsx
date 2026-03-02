@@ -26,7 +26,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-[#FEFBF6]">
+    <section  id="services" className="bg-[#FEFBF6]">
       <div className="flex-row justify-between px-40 py-24 ">
         <div className="grid lg:grid-cols-3 border-t-2 border-black">
           <div className="py-16 pr-10 mt-10">

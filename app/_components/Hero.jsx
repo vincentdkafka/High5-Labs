@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 const Hero = () => {
   return (
-    <div className="bg-[#FEFBF6]  w-full">
+    <div id="home" className="bg-[#FEFBF6] w-full">
       <div className="flex justify-between px-40 py-24">
         <div>
           <h2 className="font-light mt-16 text-2xl ">We’re Not a Traditional Agency</h2>
@@ -14,7 +14,11 @@ const Hero = () => {
             strategy to execution, we craft high-performance digital experiences
             that drive real growth, not just traffic.
           </p>
+
+          <a href="#projects">
         <Button className="mt-8 h-12 w-40 rounded-4xl">View projects <span className=""><MoveRight /></span></Button>
+
+          </a>
         </div>
 
         <div>
@@ -26,7 +30,6 @@ const Hero = () => {
           />
         </div>
 
-        {/* <div className="border-b-2 px-50 border-black"></div> */}
       </div>
 
       

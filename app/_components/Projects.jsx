@@ -34,8 +34,8 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section className="px-40 bg-[#FEFBF6]">
-      <div className="px-40 border-t-2 mt-20 border-black"></div>
+    <section id="projects" className="px-40 bg-[#FEFBF6] pt-20">
+      <div className="px-40 border-t-2 border-black"></div>
 
       <div>
         <h2 className="text-5xl font-semibold mt-18 mb-12">Selected Projects</h2>
