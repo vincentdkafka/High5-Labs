@@ -22,7 +22,6 @@ export default function Footer() {
               engineering to help ambitious brands grow.
             </p>
 
-            
             <div className="flex gap-4 mt-6">
               {socialLinks.map((item, i) => {
                 const Icon = item.icon;
@@ -75,15 +74,30 @@ export default function Footer() {
             <div>
               <h3 className="text-white font-medium mb-6">Resources</h3>
               <ul className="space-y-3">
-                {["Email: high5labs2026@gmail.com", "+91 7053091501"].map(
-                  (item, i) => (
+                {[
+                  "Email: high5labs2026@gmail.com",
+                  "+91 7053091501",
+                  "Internship",
+                ].map((item, i) => {
+                  const isInternship = item === "Internship";
+
+                  return (
                     <li key={i}>
-                      <a href="#" className="hover:text-white transition">
+                      <a
+                        href={
+                          isInternship
+                            ? "https://docs.google.com/forms/d/e/1FAIpQLSdxl1RS6McFBFpkxbUXkXN0dAQ0DfGuhSRW3nMxjs8aMW0FZA/viewform"
+                            : "#Home"
+                        }
+                        target={isInternship ? "_blank" : undefined}
+                        rel={isInternship ? "noopener noreferrer" : undefined}
+                        className="hover:text-white transition"
+                      >
                         {item}
                       </a>
                     </li>
-                  ),
-                )}
+                  );
+                })}
               </ul>
             </div>
           </div>
