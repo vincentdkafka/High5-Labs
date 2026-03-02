@@ -16,7 +16,7 @@ const Hero = () => {
           </p>
 
           <a href="#projects">
-        <Button className="mt-8 h-12 w-40 rounded-4xl">View projects <span className=""><MoveRight /></span></Button>
+        <Button className=" bg-[#04112d] mt-8 h-12 w-40 rounded-4xl">View projects <span className=""><MoveRight /></span></Button>
 
           </a>
         </div>

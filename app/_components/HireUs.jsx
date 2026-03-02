@@ -1,27 +1,45 @@
+
+"use client"
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import { Check, Star, Send, ShieldCheck, Users } from "lucide-react";
 
 const expectations = [
-  "Industry-leading design",
-  "Developer community support",
-  "Simple and affordable",
+  "Precision-engineered web solutions",
+  "AI automation that drives efficiency",
+  "Technology built to scale with your growth",
+  "Internship Oppurtunities",
 ];
 
 const HireUs = () => {
+  const [state, handleSubmit] = useForm("mqedvaaj"); 
+
+  if (state.succeeded) {
+    return (
+      <div className="bg-[#FEFBF6] rounded-3xl shadow-lg p-8 lg:p-10  text-center">
+        <h2 className="text-2xl font-semibold mb-4">
+          Message Sent Successfully 
+        </h2>
+        <p className="text-gray-600">
+          Thank you for reaching out. We’ll get back to you within 1–2 days.
+        </p>
+      </div>
+    );
+  }
   return (
     <section id="contact" className="py-24 bg-[#FEFBF6]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          
           <div>
-            <h1 className="text-5xl font-semibold mt-20 tracking-tight">Hire Us</h1>
+            <h1 className="text-5xl font-semibold mt-14 tracking-tight">
+              High5 Labs
+            </h1>
 
             <p className="mt-4 text-lg text-gray-600 max-w-lg">
-              We help brands and platforms turn bold ideas into beautiful
-              digital products and scalable experiences.
+              We turn complex business challenges into scalable web solutions
+              enhanced by intelligent automation and precision engineering
             </p>
 
-            
             <div className="mt-10">
               <h3 className="text-xl font-semibold">What can you expect?</h3>
 
@@ -36,51 +54,79 @@ const HireUs = () => {
                 ))}
               </ul>
             </div>
-
-          
           </div>
 
-          
           <div className="bg-white rounded-3xl shadow-lg p-8 lg:p-10 border">
             <h2 className="text-2xl font-semibold">
               Let’s build something great
             </h2>
 
-            <form className="mt-8 space-y-6">
+            <form onSubmit={handleSubmit} className="mt-8 space-y-6">
+              {/* First + Last Name */}
               <div className="grid sm:grid-cols-2 gap-6">
-                <Input label="First Name" />
-                <Input label="Last Name" />
+                <div>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    required
+                    className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                  />
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    required
+                    className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                  />
+                </div>
               </div>
 
+              {/* Email */}
               <div>
-                <label className="block text-sm font-medium mb-2">
-                  Project Details
-                </label>
-                <textarea
-                  rows="4"
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
                   className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
-                  placeholder="Tell us about your project..."
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
                 />
               </div>
 
-              {/* Checkbox */}
-              <div className="flex items-start gap-3 text-sm text-gray-600">
-                <ShieldCheck size={16} className="mt-1" />
-                <p>
-                  By submitting this form you agree to our{" "}
-                  <span className="underline cursor-pointer">
-                    privacy policy
-                  </span>
-                  .
-                </p>
+              {/* Project Details */}
+              <div>
+                <textarea
+                  name="message"
+                  rows="4"
+                  required
+                  placeholder="Tell us about your project..."
+                  className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
+                  className="text-red-500 text-sm mt-1"
+                />
               </div>
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-black text-white flex items-center justify-center gap-2 hover:bg-gray-900 transition"
+                disabled={state.submitting}
+                className="w-full py-3 rounded-xl bg-[#04112d] text-white flex items-center justify-center gap-2 hover:bg-gray-900 transition disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 <Send size={16} />
-                Lets Talk
+                {state.submitting ? "Sending..." : "Let’s Talk"}
               </button>
 
               <p className="text-center text-sm text-gray-500">

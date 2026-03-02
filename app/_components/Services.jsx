@@ -1,32 +1,36 @@
-import { Waves } from "lucide-react";
+import { Cpu, GitBranch, ImageIcon, Puzzle, Waves } from "lucide-react";
 import React from "react";
 
 const services = [
   {
-    title: "Web Design",
+    title: "Workflow Architecture",
     description:
-      "From concept to launch, we create stunning, user-centric websites that elevate your brand and engage your audience.",
+      "Seamless system design that connects your tools and processes into one unified ecosystem.",
+    icon: GitBranch,
   },
   {
-    title: "Web Development",
+    title: "AI Automation",
     description:
-      "High-performance, scalable websites built with modern technologies for long-term growth.",
+      "Intelligent automation solutions that eliminate manual work and scale your operations effortlessly.",
+    icon: Cpu,
   },
   {
-    title: "UI/UX Strategy",
+    title: "Custom Enterprise Extensions",
     description:
-      "We craft intuitive experiences that convert visitors into loyal customers.",
+      "Tailored software enhancements built to extend and optimize your existing infrastructure.",
+    icon: Puzzle,
   },
   {
-    title: "Brand Identity",
+    title: "Digital Asset Production",
     description:
-      "Strategic visual systems that give your business a distinctive presence.",
+      "High-impact visual and digital assets crafted to elevate your brand identity.",
+    icon: ImageIcon,
   },
 ];
 
 const Services = () => {
   return (
-    <section  id="services" className="bg-[#FEFBF6]">
+    <section id="services" className="bg-[#FEFBF6]">
       <div className="flex-row justify-between px-40 py-24 ">
         <div className="grid lg:grid-cols-3 border-t-2 border-black">
           <div className="py-16 pr-10 mt-10">
@@ -47,6 +51,7 @@ const Services = () => {
                 <ServiceCard
                   title={service.title}
                   description={service.description}
+                  icon={service.icon}
                 />
               </div>
             ))}
@@ -58,15 +63,15 @@ const Services = () => {
   );
 };
 
-const ServiceCard = ({ title, description }) => {
+const ServiceCard = ({ title, description, icon: Icon }) => {
   return (
     <div className="flex items-start gap-6">
-      {/* ICON */}
-      <div className="w-14 h-14 flex items-center justify-center">
-        <Waves size={28} />
-      </div>
+     
+     <div className="w-14 h-14 flex items-center justify-center transition-all duration-300 group-hover:scale-110">
+       <Icon size={28}/>
+     </div>
 
-      {/* CONTENT */}
+     
       <div>
         <h3 className="text-2xl font-semibold mb-4">{title}</h3>
 

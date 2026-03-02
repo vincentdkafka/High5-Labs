@@ -1,11 +1,12 @@
 import React from "react";
-import {
-  Twitter,
-  Instagram,
-  Linkedin,
-  Github,
-  Send,
-} from "lucide-react";
+import { Twitter, Instagram, Linkedin, Github, Send } from "lucide-react";
+
+const socialLinks = [
+  ,
+  { icon: Instagram, href: "https://instagram.com/yourusername" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/high5-labs/" },
+  { icon: Github, href: "https://github.com/yourusername" },
+];
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -13,80 +14,81 @@ export default function Footer() {
   return (
     <footer className="bg-[#04112d] text-slate-400 pt-20 pb-10 px-6 lg:px-16">
       <div className="max-w-7xl mx-auto items-center ">
-        
         <div className="grid md:grid-cols-2 gap-16">
-          
-          
           <div>
-            <h2 className="text-2xl font-semibold text-white">
-              High5 Labs
-            </h2>
+            <h2 className="text-2xl font-semibold text-white">High5 Labs</h2>
             <p className="mt-6 leading-relaxed max-w-sm">
-              We craft scalable digital experiences, blending
-              design and engineering to help ambitious brands grow.
+              We craft scalable digital experiences, blending design and
+              engineering to help ambitious brands grow.
             </p>
 
-            {/* Social Icons */}
+            
             <div className="flex gap-4 mt-6">
-              {[Twitter, Instagram, Linkedin, Github].map((Icon, i) => (
-                <div
-                  key={i}
-                  className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 transition cursor-pointer"
-                >
-                  <Icon size={16} />
-                </div>
-              ))}
+              {socialLinks.map((item, i) => {
+                const Icon = item.icon;
+
+                return (
+                  <a
+                    key={i}
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 transition cursor-pointer"
+                  >
+                    <Icon size={16} />
+                  </a>
+                );
+              })}
             </div>
           </div>
 
-         
           <div className="grid sm:grid-cols-2 gap-10">
             <div>
-              <h3 className="text-white font-medium mb-6">
-                Company
-              </h3>
+              <h3 className="text-white font-medium mb-6">Company</h3>
               <ul className="space-y-3">
-                {["About", "Careers", "Contact", "Privacy Policy"].map(
-                  (item, i) => (
-                    <li key={i}>
-                      <a
-                        href="#"
-                        className="hover:text-white transition"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                <li>
+                  <a href="#home" className="hover:text-white transition">
+                    Home
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#projects" className="hover:text-white transition">
+                    Projects
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#services" className="hover:text-white transition">
+                    Services
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#contact" className="hover:text-white transition">
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h3 className="text-white font-medium mb-6">
-                Resources
-              </h3>
+              <h3 className="text-white font-medium mb-6">Resources</h3>
               <ul className="space-y-3">
-                {["Blog", "Case Studies", "Documentation", "Support"].map(
+                {["Email: high5labs2026@gmail.com", "+91 7053091501"].map(
                   (item, i) => (
                     <li key={i}>
-                      <a
-                        href="#"
-                        className="hover:text-white transition"
-                      >
+                      <a href="#" className="hover:text-white transition">
                         {item}
                       </a>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>
           </div>
-
-         
-        
         </div>
 
-        
         <div className="border-t border-slate-800 mt-16 pt-6 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
           <p>© {year} High5 Labs. All rights reserved.</p>
 

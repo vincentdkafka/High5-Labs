@@ -10,27 +10,27 @@ import {
 
 const steps = [
   {
-    title: "Market Research and Analysis",
+    title: "Business Discovery and Strategy",
     description:
-      "Identify your target audience and understand their needs, preferences, and behaviors.",
+      "Analyze your business model, workflows, and market position to identify high-impact digital and automation opportunities.",
     icon: Search,
   },
   {
-    title: "Product Development and Testing",
+    title: "Solution Architecture and Design",
     description:
-      "Develop digital products or services that address the needs and preferences of your audience.",
+      "Design scalable web platforms and AI-driven systems tailored to optimize operations and customer experience.",
     icon: Sparkles,
   },
   {
-    title: "Marketing and Promotion",
+    title: "Development and AI Integration",
     description:
-      "Develop a comprehensive marketing strategy to promote your digital products or services.",
+      "Build high-performance web applications and embed intelligent automation to streamline processes and boost efficiency.",
     icon: LineChart,
   },
   {
-    title: "Launch and Optimization",
+    title: "Deployment and Continuous Optimization",
     description:
-      "Launch your product and continuously optimize based on performance and user feedback.",
+      "Launch with precision and continuously refine performance, security, and automation based on real-time insights.",
     icon: Rocket,
   },
 ];
@@ -65,11 +65,12 @@ const Approach = () => {
 
             <div className="space-y-12 relative border-l border-gray-200 pl-8">
               {steps.map((step, index) => {
+                const Icon = step.icon;
                 return (
                   <div key={index} className="relative">
-                    {/* Timeline Dot */}
-                    <div className="absolute -left-8.5 top-1"></div>
-
+                    <div className="absolute -left-12 top-0 w-8 h-8 flex items-center justify-center rounded-full bg-[#04112d] text-white">
+                      <Icon size={16} />
+                    </div>
                     <h3 className="text-lg font-semibold">{step.title}</h3>
                     <p className="mt-2 text-gray-600">{step.description}</p>
                   </div>
@@ -79,8 +80,8 @@ const Approach = () => {
 
             <div className="mt-14 ">
               <a
-                href="#"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-full text-sm font-medium transition hover:scale-105 hover:bg-gray-900"
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#04112d] text-white rounded-full text-sm font-medium transition hover:scale-105 hover:bg-gray-900"
               >
                 <Phone size={16} />
                 Schedule a Call
