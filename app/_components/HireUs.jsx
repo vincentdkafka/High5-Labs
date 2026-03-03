@@ -27,7 +27,7 @@ const HireUs = () => {
     );
   }
   return (
-    <section id="contact" className="py-16 lg:py-24 bg-[#FEFBF6]">
+    <section id="contact" className="py-8 lg:py-12 bg-[#FEFBF6]">
       <div className="container mx-auto px-4 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="text-center lg:text-left">

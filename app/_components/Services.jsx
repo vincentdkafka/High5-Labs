@@ -31,7 +31,7 @@ const services = [
 const Services = () => {
   return (
     <section id="services" className="bg-[#FEFBF6] overflow-hidden">
-      <div className="container mx-auto px-4 lg:px-20 py-16 lg:py-24">
+      <div className="container mx-auto px-4 lg:px-20 py-16 lg:py-16">
         <div className="flex flex-col lg:flex-row border-t-2 border-black">
           <div className="lg:w-1/3 py-8 lg:py-16 pr-0 lg:pr-10">
             <h2 className="text-4xl lg:text-5xl font-semibold">What we do?</h2>
