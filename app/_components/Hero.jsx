@@ -27,8 +27,8 @@ const Hero = () => {
         <div className="flex-1 w-full max-w-2xl mx-auto lg:mx-0">
           <Image
             src="/wallpaper.png"
-            width={600}
-            height={800}
+            width={700}
+            height={995}
             alt="Technical Growth Partner"
             className="w-full h-auto object-contain"
             priority
