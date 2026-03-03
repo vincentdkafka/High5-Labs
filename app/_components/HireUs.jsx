@@ -1,5 +1,4 @@
-
-"use client"
+"use client";
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
 import { Check, Star, Send, ShieldCheck, Users } from "lucide-react";
@@ -12,13 +11,13 @@ const expectations = [
 ];
 
 const HireUs = () => {
-  const [state, handleSubmit] = useForm("mqedvaaj"); 
+  const [state, handleSubmit] = useForm("mqedvaaj");
 
   if (state.succeeded) {
     return (
       <div className="bg-[#FEFBF6] rounded-3xl shadow-lg p-8 lg:p-10  text-center">
         <h2 className="text-2xl font-semibold mb-4">
-          Message Sent Successfully 
+          Message Sent Successfully
         </h2>
         <p className="text-gray-600">
           Thank you for reaching out. We’ll get back to you within 1–2 days.
@@ -27,7 +26,7 @@ const HireUs = () => {
     );
   }
   return (
-    <section id="contact" className="py-8 lg:py-12 bg-[#FEFBF6]">
+    <section id="contact" className="py-8 lg:pb-20 bg-[#FEFBF6]">
       <div className="container mx-auto px-4 lg:px-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           <div className="text-center lg:text-left">
@@ -56,7 +55,7 @@ const HireUs = () => {
             </div>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-lg p-8 lg:p-10 border">
+          <div className="bg-[#fec853] rounded-3xl shadow-lg p-8 lg:p-10 border">
             <h2 className="text-2xl font-semibold">
               Let’s build something great
             </h2>
@@ -70,7 +69,16 @@ const HireUs = () => {
                     name="firstName"
                     placeholder="First Name"
                     required
-                    className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                    className="w-full rounded-xl 
+border border-black/10 
+bg-white/80 
+px-4 py-3 
+placeholder:text-black/40 
+focus:outline-none 
+focus:border-[#04112d] 
+focus:ring-2 
+focus:ring-[#04112d]/20 
+transition"
                   />
                 </div>
 
@@ -80,7 +88,16 @@ const HireUs = () => {
                     name="lastName"
                     placeholder="Last Name"
                     required
-                    className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                    className="w-full rounded-xl 
+border border-black/10 
+bg-white/80 
+px-4 py-3 
+placeholder:text-black/40 
+focus:outline-none 
+focus:border-[#04112d] 
+focus:ring-2 
+focus:ring-[#04112d]/20 
+transition"
                   />
                 </div>
               </div>
@@ -92,7 +109,16 @@ const HireUs = () => {
                   name="email"
                   placeholder="Email Address"
                   required
-                  className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className="w-full rounded-xl 
+border border-black/10 
+bg-white/80 
+px-4 py-3 
+placeholder:text-black/40 
+focus:outline-none 
+focus:border-[#04112d] 
+focus:ring-2 
+focus:ring-[#04112d]/20 
+transition"
                 />
                 <ValidationError
                   prefix="Email"
@@ -109,7 +135,16 @@ const HireUs = () => {
                   rows="4"
                   required
                   placeholder="Tell us about your project..."
-                  className="w-full rounded-xl border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-black transition"
+                  className="w-full rounded-xl 
+border border-black/10 
+bg-white/80 
+px-4 py-3 
+placeholder:text-black/40 
+focus:outline-none 
+focus:border-[#04112d] 
+focus:ring-2 
+focus:ring-[#04112d]/20 
+transition"
                 />
                 <ValidationError
                   prefix="Message"

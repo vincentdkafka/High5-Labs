@@ -7,6 +7,7 @@ import Approach from './_components/Approach'
 import Projects from './_components/Projects'
 import HireUs from './_components/HireUs'
 import Footer from './_components/Footer'
+import Internship from './_components/Internship'
 
 
 const page = () => {
@@ -17,6 +18,7 @@ const page = () => {
       <Services/>
       <Approach/>
       <Projects/>
+      <Internship/>
       <HireUs/>
       <Footer/>
 
