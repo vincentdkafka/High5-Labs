@@ -46,7 +46,7 @@ const HireUs = () => {
               <ul className="mt-6 space-y-4 inline-block text-left">
                 {expectations.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0">
+                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center shrink-0">
                       <Check size={14} />
                     </div>
                     <span className="text-gray-600">{item}</span>

@@ -17,9 +17,16 @@ const Navbar = () => {
 
   return (
     <nav className="w-full bg-[#FEFBF6] sticky top-0 z-50">
-      <div className="container mx-auto px-4 lg:px-20 py-4 lg:py-6 flex justify-between items-center border-b-2 border-black/10 lg:border-black">
+      <div className="container mx-auto px-4 lg:px-20 py-4 lg:py-4 flex justify-between items-center border-b-2 border-black/10 lg:border-black">
         <Link href="/" className="flex items-center">
-          <Image src="/logo3.png" width={50} height={50} alt="logo" className="w-10 h-10 lg:w-12 lg:h-12" />
+          <div className="relative w-12 h-12 lg:w-16 lg:h-16">
+            <Image
+              src="/logo2.png"
+              alt="logo"
+              fill
+              className="object-contain"
+            />
+          </div>
         </Link>
 
         {/* Desktop Navigation */}
@@ -27,7 +34,10 @@ const Navbar = () => {
           <ul className="flex items-center gap-12">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a className="hover:text-blue-600 transition duration-300" href={link.href}>
+                <a
+                  className="hover:text-blue-600 transition duration-300"
+                  href={link.href}
+                >
                   {link.name}
                 </a>
               </li>
