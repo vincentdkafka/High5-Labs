@@ -30,22 +30,24 @@ const services = [
 
 const Services = () => {
   return (
-    <section id="services" className="bg-[#FEFBF6]">
-      <div className="flex-row justify-between px-40 py-24 ">
-        <div className="grid lg:grid-cols-3 border-t-2 border-black">
-          <div className="py-16 pr-10 mt-10">
-            <h2 className="text-5xl font-semibold">What we do?</h2>
+    <section id="services" className="bg-[#FEFBF6] overflow-hidden">
+      <div className="container mx-auto px-4 lg:px-20 py-16 lg:py-24">
+        <div className="flex flex-col lg:flex-row border-t-2 border-black">
+          <div className="lg:w-1/3 py-8 lg:py-16 pr-0 lg:pr-10">
+            <h2 className="text-4xl lg:text-5xl font-semibold">What we do?</h2>
           </div>
 
           {/* RIGHT GRID */}
-          <div className="lg:col-span-2 grid md:grid-cols-2 mt-20 relative">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 mt-8 lg:mt-20 relative">
             {services.map((service, index) => (
               <div
                 key={index}
                 className={`
-                  p-16
-                  ${index % 2 === 0 ? "border-r border-black" : ""}
-                  ${index < 2 ? "border-b border-black" : ""}
+                  p-8 lg:p-16
+                  border-black
+                  ${index % 2 === 0 ? "md:border-r" : ""}
+                  ${index < services.length - 1 ? "border-b" : "md:border-b-0"}
+                  ${index === services.length - 2 ? "md:border-b-0" : ""}
                 `}
               >
                 <ServiceCard
@@ -57,7 +59,7 @@ const Services = () => {
             ))}
           </div>
         </div>
-        <div className="px-40 border-t-2 mt-20 border-black"></div>
+        <div className="border-t-2 mt-12 lg:mt-20 border-black"></div>
       </div>
     </section>
   );

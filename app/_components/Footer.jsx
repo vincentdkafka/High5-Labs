@@ -12,8 +12,8 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#04112d] text-slate-400 pt-20 pb-10 px-6 lg:px-16">
-      <div className="max-w-7xl mx-auto items-center ">
+    <footer className="bg-[#04112d] text-slate-400 pt-16 lg:pt-20 pb-10">
+      <div className="container mx-auto px-4 lg:px-20">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-2xl font-semibold text-white">High5 Labs</h2>

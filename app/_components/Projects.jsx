@@ -34,11 +34,10 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="px-40 bg-[#FEFBF6] pt-20">
-      <div className="px-40 border-t-2 border-black"></div>
-
-      <div>
-        <h2 className="text-5xl font-semibold mt-18 mb-12">Selected Projects</h2>
+    <section id="projects" className="bg-[#FEFBF6] py-16 lg:pt-20">
+      <div className="container mx-auto px-4 lg:px-20">
+        <div className="border-t-2 border-black mb-12 lg:mb-18"></div>
+        <h2 className="text-4xl lg:text-5xl font-semibold mb-12">Selected Projects</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {projects.map((project, index) => (
@@ -86,7 +85,7 @@ const Projects = () => {
             </a>
           ))}
         </div>
-        <div className="px-40 border-t-2 mt-20 border-black"></div>
+        <div className="border-t-2 mt-16 lg:mt-20 border-black"></div>
       </div>
     </section>
   );
