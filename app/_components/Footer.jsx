@@ -3,7 +3,7 @@ import { Twitter, Instagram, Linkedin, Github, Send } from "lucide-react";
 
 const socialLinks = [
   ,
-  { icon: Instagram, href: "https://instagram.com/yourusername" },
+  { icon: Instagram, href: "https://www.instagram.com/_high5_labs/" },
   { icon: Linkedin, href: "https://www.linkedin.com/company/high5-labs/" },
   { icon: Github, href: "https://github.com/yourusername" },
 ];
