@@ -55,7 +55,7 @@ const HireUs = () => {
             </div>
           </div>
 
-          <div className="bg-[#fec853] rounded-3xl shadow-lg p-8 lg:p-10 border">
+          <div className="bg-[#D4AF37] rounded-3xl shadow-lg p-8 lg:p-10 border">
             <h2 className="text-2xl font-semibold">
               Let’s build something great
             </h2>

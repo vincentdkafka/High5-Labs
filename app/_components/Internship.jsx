@@ -31,7 +31,7 @@ const Internship = () => {
 
         {/* HIGHLIGHTS */}
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-3 gap-10">
-          <div className="bg-[#fec853] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
+          <div className="bg-[#D4AF37] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#04112d] text-white mb-6">
               <Code2 size={20} />
             </div>
@@ -42,7 +42,7 @@ const Internship = () => {
             </p>
           </div>
 
-          <div className="bg-[#fec853] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
+          <div className="bg-[#D4AF37] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#04112d] text-white mb-6">
               <Sparkles size={20} />
             </div>
@@ -53,7 +53,7 @@ const Internship = () => {
             </p>
           </div>
 
-          <div className="bg-[#fec853] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
+          <div className="bg-[#D4AF37] p-8 rounded-3xl border border-black/10 hover:shadow-lg transition">
             <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#04112d] text-white mb-6">
               <ArrowUpRight size={20} />
             </div>
