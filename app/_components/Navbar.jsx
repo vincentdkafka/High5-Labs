@@ -13,6 +13,7 @@ const Navbar = () => {
     { name: "Services", href: "#services" },
     { name: "Approach", href: "#approach" },
     { name: "Projects", href: "#projects" },
+    { name: "Internship", href: "#internship" },
   ];
 
   return (
@@ -43,7 +44,7 @@ const Navbar = () => {
               </li>
             ))}
             <a href="#contact">
-              <Button className="bg-[#04112d] rounded-full px-8 py-2 font-normal text-lg hover:scale-105 transition duration-300">
+              <Button className="bg-[#04112d] rounded-full px-8 py-4 font-normal text-lg hover:scale-105 transition duration-300">
                 Let's Talk
               </Button>
             </a>

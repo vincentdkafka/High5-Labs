@@ -4,7 +4,7 @@ import { ArrowUpRight, Code2, Sparkles } from "lucide-react";
 
 const Internship = () => {
   return (
-    <section className="bg-[#FEFBF6] pt-4 pb-16 ">
+    <section id="internship" className="bg-[#FEFBF6] pt-4 pb-16 ">
       <div className="container mx-auto px-4 lg:px-20">
         {/* HERO */}
         <div className="max-w-4xl">
