@@ -27,26 +27,26 @@ const HireUs = () => {
     );
   }
   return (
-    <section id="contact" className="py-24 bg-[#FEFBF6]">
-      <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
-          <div>
-            <h1 className="text-5xl font-semibold mt-14 tracking-tight">
+    <section id="contact" className="py-16 lg:py-24 bg-[#FEFBF6]">
+      <div className="container mx-auto px-4 lg:px-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <div className="text-center lg:text-left">
+            <h1 className="text-4xl lg:text-5xl font-semibold mt-8 lg:mt-14 tracking-tight">
               High5 Labs
             </h1>
 
-            <p className="mt-4 text-lg text-gray-600 max-w-lg">
+            <p className="mt-4 text-base lg:text-lg text-gray-600 max-w-lg mx-auto lg:mx-0">
               We turn complex business challenges into scalable web solutions
               enhanced by intelligent automation and precision engineering
             </p>
 
-            <div className="mt-10">
+            <div className="mt-10 mb-12 lg:mb-0">
               <h3 className="text-xl font-semibold">What can you expect?</h3>
 
-              <ul className="mt-6 space-y-4">
+              <ul className="mt-6 space-y-4 inline-block text-left">
                 {expectations.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-black text-white flex items-center justify-center flex-shrink-0">
                       <Check size={14} />
                     </div>
                     <span className="text-gray-600">{item}</span>

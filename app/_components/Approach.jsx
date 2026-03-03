@@ -37,19 +37,19 @@ const steps = [
 
 const Approach = () => {
   return (
-    <section id="approach" className="bg-[#FEFBF6] px-40">
-      <div className=" mx-auto ">
-        <div className="max-w-3xl mb-16">
-          <h2 className="text-5xl font-semibold tracking-tight">
+    <section id="approach" className="bg-[#FEFBF6] py-16 lg:py-24">
+      <div className="container mx-auto px-4 lg:px-20">
+        <div className="max-w-3xl mb-12 lg:mb-16 text-center lg:text-left">
+          <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight">
             Our Approach
           </h2>
-          <p className="mt-4 items-center text-gray-600 text-lg">
+          <p className="mt-4 text-gray-600 text-base lg:text-lg">
             From research to launch, we execute a structured process that
             transforms ideas into scalable digital experiences.
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="relative overflow-hidden rounded-3xl aspect-5/5">
             <img
               src="https://images.unsplash.com/photo-1587614203976-365c74645e83?q=80&w=1200&auto=format&fit=crop"
