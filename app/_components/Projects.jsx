@@ -6,21 +6,21 @@ const projects = [
     title: "AI SaaS App",
     description:
       "A scalable AI-powered SaaS platform designed to automate business workflows and content generation. Built with modern web technologies and integrated with powerful AI APIs to deliver smart automation, user authentication, and a clean dashboard experience.",
-    image: "/1.png",
+    image: "/1.jpg",
     tags: ["Next.js", "React", "Node.js", "OpenAI API", "Tailwind CSS"],
   },
   {
     title: "AI Receptionist",
     description:
       "An intelligent AI receptionist that can answer customer queries, handle incoming calls or chats, and schedule appointments automatically. Designed to reduce manual workload for businesses while providing fast and natural conversational responses.",
-    image: "/2.png",
+    image: "/2.jpg",
     tags: ["Next.js", "Vapi AI", "Voice AI", "Node.js", "Tailwind CSS"],
   },
   {
     title: "Lead Tracker",
     description:
       "A smart lead management system that helps businesses capture, track, and organize potential clients in one dashboard. Includes lead status tracking, contact management, and insights to help teams convert leads into customers efficiently.",
-    image: "/3.png",
+    image: "/3.jpg",
     tags: ["Next.js", "React", "Node.js", "MongoDB", "Dashboard UI"],
   },
   {
