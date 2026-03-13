@@ -5,30 +5,30 @@ const projects = [
   {
     title: "AI SaaS App",
     description:
-      "A full-stack AI-powered SaaS platform built on the PERN stack with OpenAI and ClipDrop integrations. Features include image generation, resume review, secure Clerk authentication, and a responsive React + Tailwind UI.",
+      "A scalable AI-powered SaaS platform designed to automate business workflows and content generation. Built with modern web technologies and integrated with powerful AI APIs to deliver smart automation, user authentication, and a clean dashboard experience.",
     image: "/1.png",
-    tags: ["React", "Node.js", "PostgreSQL", "OpenAI", "Clerk"],
+    tags: ["Next.js", "React", "Node.js", "OpenAI API", "Tailwind CSS"],
   },
   {
-    title: "CALC-AI",
+    title: "AI Receptionist",
     description:
-      "An intelligent AI calculator that understands mathematical problems in text and image form, solves them symbolically and numerically, and renders beautifully formatted results using MathJax.",
+      "An intelligent AI receptionist that can answer customer queries, handle incoming calls or chats, and schedule appointments automatically. Designed to reduce manual workload for businesses while providing fast and natural conversational responses.",
     image: "/2.png",
-    tags: ["Python", "TypeScript", "React", "MathJax", "Tailwind CSS"],
+    tags: ["Next.js", "Vapi AI", "Voice AI", "Node.js", "Tailwind CSS"],
   },
   {
-    title: "Jobfit-AI",
+    title: "Lead Tracker",
     description:
-      "An AI-powered mock interview platform with voice-based interviews, real-time grading, and performance feedback. Built using Next.js, Tailwind CSS, Shadcn UI, and Google authentication.",
+      "A smart lead management system that helps businesses capture, track, and organize potential clients in one dashboard. Includes lead status tracking, contact management, and insights to help teams convert leads into customers efficiently.",
     image: "/3.png",
-    tags: ["Next.js", "Google Auth", "Vapi AI", "Tailwind CSS"],
+    tags: ["Next.js", "React", "Node.js", "MongoDB", "Dashboard UI"],
   },
   {
-    title: "Outerstella – Drive Clone",
+    title: "AI-Powered Landing Page",
     description:
-      "A modern cloud storage platform inspired by Google Drive, allowing file upload, organization, sharing, 100MB free storage, and OTP verification using Next.js and Appwrite.",
-    image: "/outerstella.png",
-    tags: ["Next.js", "Appwrite", "Node.js", "Tailwind CSS"],
+      "A high-conversion landing page built with AI-driven elements such as intelligent chat assistance, automated lead capture, and dynamic content personalization to help businesses stand out and improve customer engagement.",
+    image: "/4.png",
+    tags: ["Next.js", "React", "AI Integration", "Tailwind CSS", "SEO Optimized"],
   },
 ];
 

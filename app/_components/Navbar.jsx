@@ -79,7 +79,8 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <a href="#contact" onClick={() => setIsOpen(false)}>
+          <Link href="/internship" className=" hover:text-blue-600 duration-300">Internship</Link>
+          <a href="/#contact" onClick={() => setIsOpen(false)}>
             <Button className="bg-[#04112d] rounded-full px-12 py-4 text-xl font-normal">
               Let's Talk
             </Button>
