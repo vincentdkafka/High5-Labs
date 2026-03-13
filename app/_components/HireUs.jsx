@@ -57,7 +57,7 @@ const HireUs = () => {
 
           <div className="bg-[#D4AF37] rounded-3xl shadow-lg p-8 lg:p-10 border">
             <h2 className="text-2xl font-semibold">
-              Let’s build something great
+              Grow with our services here !!
             </h2>
 
             <form onSubmit={handleSubmit} className="mt-8 space-y-6">
