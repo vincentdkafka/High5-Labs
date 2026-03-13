@@ -18,7 +18,6 @@ const page = () => {
       <Services/>
       <Approach/>
       <Projects/>
-      <Internship/>
       <HireUs/>
       <Footer/>
 

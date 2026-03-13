@@ -9,11 +9,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Services", href: "#services" },
-    { name: "Approach", href: "#approach" },
-    { name: "Projects", href: "#projects" },
-    { name: "Internship", href: "#internship" },
+    { name: "Home", href: "/#home" },
+    { name: "Services", href: "/#services" },
+    { name: "Approach", href: "/#approach" },
+    { name: "Projects", href: "/#projects" },
   ];
 
   return (
@@ -43,7 +42,8 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <a href="#contact">
+            <Link href="/internship" className=" hover:text-blue-600 duration-300">Internship</Link>
+            <a href="/#contact">
               <Button className="bg-[#04112d] rounded-full px-8 py-4 font-normal text-lg hover:scale-105 transition duration-300">
                 Let's Talk
               </Button>
