@@ -86,11 +86,10 @@ export default function Footer() {
                       <a
                         href={
                           isInternship
-                            ? "https://docs.google.com/forms/d/e/1FAIpQLSdxl1RS6McFBFpkxbUXkXN0dAQ0DfGuhSRW3nMxjs8aMW0FZA/viewform"
+                            ? "/internship"
                             : "#Home"
                         }
-                        target={isInternship ? "_blank" : undefined}
-                        rel={isInternship ? "noopener noreferrer" : undefined}
+                        
                         className="hover:text-white transition"
                       >
                         {item}
