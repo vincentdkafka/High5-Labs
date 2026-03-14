@@ -59,11 +59,11 @@ const Approach = () => {
           </div>
 
           <div className="relative">
-            <p className="text-xs uppercase tracking-widest text-gray-500 mb-8">
+            <p className="text-s uppercase tracking-widest text-gray-500 mb-8">
               Steps
             </p>
 
-            <div className="space-y-12 relative border-l border-gray-200 pl-8">
+            <div className="space-y-12 relative pl-12">
               {steps.map((step, index) => {
                 const Icon = step.icon;
                 return (
