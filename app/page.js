@@ -8,6 +8,7 @@ import Projects from './_components/Projects'
 import HireUs from './_components/HireUs'
 import Footer from './_components/Footer'
 import Internship from './_components/Internship'
+import Pricing from './_components/Pricing'
 
 
 const page = () => {
@@ -18,6 +19,7 @@ const page = () => {
       <Services/>
       <Approach/>
       <Projects/>
+      <Pricing/>
       <HireUs/>
       <Footer/>
 
