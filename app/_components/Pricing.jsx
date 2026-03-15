@@ -208,7 +208,7 @@ const Pricing = () => {
                 {item.name}
               </h1>
               
-              <p className="text-sm text-zinc-500 mt-2 h-[40px]">
+              <p className="text-sm text-zinc-500 mt-2 h-10">
                 {item.description}
               </p>
               
@@ -226,8 +226,8 @@ const Pricing = () => {
                 Get Started
               </button>
               
-              {/* Added flex-grow and overflow-y-auto so the features fill the remaining space without breaking the card size */}
-              <div className="w-full mt-8 space-y-2.5 pb-4 flex-grow overflow-y-auto">
+
+              <div className="w-full mt-8 space-y-2.5 pb-4 grow overflow-y-auto">
                 {item.features.map((feature, index) => (
                   <p
                     key={index}
