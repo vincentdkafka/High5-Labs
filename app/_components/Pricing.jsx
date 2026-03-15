@@ -194,26 +194,40 @@ const Pricing = () => {
             </span>
           </label>
         </div>
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
           {pricingData[industry].map((item, index) => (
             <div
-            
               key={index}
-              className={`border  cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start max-w-md transition duration-300 hover:-translate-y-1 ${item.mostPopular ? "bg-gray-100" : ""}`}
+              // Changed from min-h to a strict h-[620px] to completely lock the size
+              className={`border cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start w-full h-132 transition duration-300 hover:-translate-y-1 ${
+                item.mostPopular ? "bg-gray-100" : "bg-white"
+              }`}
             >
               <h1 className="font-medium text-3xl text-slate-800 mt-1">
                 {item.name}
               </h1>
-              <p className="text-sm text-zinc-500 mt-2">{item.description}</p>
-              <h1 className="font-medium text-5xl text-slate-800 mt-6">
+              
+              <p className="text-sm text-zinc-500 mt-2 h-[40px]">
+                {item.description}
+              </p>
+              
+              <h1 className="font-medium text-5xl text-slate-800 mt-4">
                 ₹{item.price}
               </h1>
+              
               <button
-                className={`w-full px-4 py-3 rounded-full cursor-pointer bg-[#04112d] text-sm mt-8 ${item.mostPopular ? "bg-gray-800 hover:bg-gray-900 text-white" : "border border-zinc-300/80 bg-zinc-100 hover:bg-zinc-200/70"}`}
+                className={`w-full px-4 py-3 rounded-full cursor-pointer bg-[#04112d] text-sm mt-8 shrink-0 ${
+                  item.mostPopular
+                    ? "bg-gray-800 hover:bg-gray-900 text-white"
+                    : "border border-zinc-300/80 bg-zinc-100 hover:bg-zinc-200/70"
+                }`}
               >
                 Get Started
               </button>
-              <div className="w-full mt-8 space-y-2.5 pb-4">
+              
+              {/* Added flex-grow and overflow-y-auto so the features fill the remaining space without breaking the card size */}
+              <div className="w-full mt-8 space-y-2.5 pb-4 flex-grow overflow-y-auto">
                 {item.features.map((feature, index) => (
                   <p
                     key={index}
