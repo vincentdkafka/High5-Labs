@@ -21,7 +21,6 @@ const Pricing = () => {
       },
       {
         name: "Growth",
-        mostPopular: true,
         price: "20,000",
         description: "Perfect for growing restaurants",
         features: [
@@ -63,7 +62,6 @@ const Pricing = () => {
       },
       {
         name: "Growth",
-        mostPopular: true,
         price: "40,000",
         description: "Automation for growing clinics",
         features: [
@@ -79,7 +77,7 @@ const Pricing = () => {
         price: "50,000",
         description: "Advanced hospital automation",
         features: [
-          "Ai Receptionist",
+          "AI Receptionist",
           "AI appointment assistant",
           "Full CRM system",
           "Patient analytics",
@@ -103,7 +101,6 @@ const Pricing = () => {
       },
       {
         name: "Growth",
-        mostPopular: true,
         price: "25,000",
         description: "For agencies and consultants",
         features: [
@@ -118,7 +115,7 @@ const Pricing = () => {
         price: "40,000",
         description: "Full business automation",
         features: [
-          "AI receptionnist",
+          "AI receptionist",
           "Lead Scoring System",
           "Complete CRM system",
           "AI support agent",
@@ -130,121 +127,103 @@ const Pricing = () => {
   };
 
   return (
-    <>
-      <section className="flex bg-[#FEFBF6] items-center justify-center flex-col py-10 px-4">
-        <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight">
-          Flexible Pricing Plans
-        </h1>
-        <p className="text-base/7 text-gray-800 max-w-sm text-center mt-4">
-          Choose a plan that supports your business growth and digital goals.
-        </p>
+    <section className="flex bg-[#FEFBF6] items-center justify-center flex-col py-12 px-4">
+      <h1 className="text-4xl lg:text-5xl font-semibold tracking-tight text-center">
+        Flexible Pricing Plans
+      </h1>
 
-        <div className="mt-6 flex gap-3 bg-zinc-100 p-2 rounded-full overflow-x-auto whitespace-nowrap sm: px-10 overflow-visible sm:whitespace-normal">
-  <label className="cursor-pointer shrink-0">
-    <input
-      type="radio"
-      name="industry"
-      value="restaurant"
-      checked={industry === "restaurant"}
-      onChange={(e) => setIndustry(e.target.value)}
-      className="hidden peer"
-    />
-    <span
-      className="px-4 py-2 text-sm rounded-full transition
-      peer-checked:bg-[#04112d] peer-checked:text-white
-      text-zinc-600"
-    >
-      Local Businesses
-    </span>
-  </label>
+      <p className="text-base text-gray-700 max-w-md text-center mt-4">
+        Choose a plan that supports your business growth and digital goals.
+      </p>
 
-  <label className="cursor-pointer shrink-0">
-    <input
-      type="radio"
-      name="industry"
-      value="hospital"
-      checked={industry === "hospital"}
-      onChange={(e) => setIndustry(e.target.value)}
-      className="hidden peer"
-    />
-    <span
-      className="px-4 py-2 text-sm rounded-full transition
-      peer-checked:bg-[#04112d] peer-checked:text-white
-      text-zinc-600"
-    >
-      Healthcare & Legal
-    </span>
-  </label>
+      {/* Industry Tabs */}
+      <div className="mt-8 w-full flex justify-center px-4">
+        <div className="inline-flex gap-3 bg-zinc-100 p-2 rounded-full overflow-x-auto whitespace-nowrap">
+          <label className="cursor-pointer shrink-0">
+            <input
+              type="radio"
+              name="industry"
+              value="restaurant"
+              checked={industry === "restaurant"}
+              onChange={(e) => setIndustry(e.target.value)}
+              className="hidden peer"
+            />
+            <span className="px-4 py-2 text-sm rounded-full transition peer-checked:bg-[#04112d] peer-checked:text-white text-zinc-600">
+              Local Businesses
+            </span>
+          </label>
 
-  <label className="cursor-pointer shrink-0">
-    <input
-      type="radio"
-      name="industry"
-      value="professional"
-      checked={industry === "professional"}
-      onChange={(e) => setIndustry(e.target.value)}
-      className="hidden peer"
-    />
-    <span
-      className="px-4 py-2 text-sm rounded-full transition
-      peer-checked:bg-[#04112d] peer-checked:text-white
-      text-zinc-600"
-    >
-      Professional Services
-    </span>
-  </label>
-</div>
+          <label className="cursor-pointer shrink-0">
+            <input
+              type="radio"
+              name="industry"
+              value="hospital"
+              checked={industry === "hospital"}
+              onChange={(e) => setIndustry(e.target.value)}
+              className="hidden peer"
+            />
+            <span className="px-4 py-2 text-sm rounded-full transition peer-checked:bg-[#04112d] peer-checked:text-white text-zinc-600">
+              Healthcare
+            </span>
+          </label>
 
-        <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
-          {pricingData[industry].map((item, index) => (
-            <div
-              key={index}
-             
-              className={`border cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start w-full h-136 transition duration-300 hover:-translate-y-1 ${
-                item.mostPopular ? "bg-white" : "bg-white"
-              }`}
-            >
-              <h1 className="font-medium text-3xl text-slate-800 mt-1">
-                {item.name}
-              </h1>
-              
-              <p className="text-sm text-zinc-500 mt-2 h-10">
-                {item.description}
-              </p>
-              
-              <h1 className="font-medium text-5xl text-slate-800 mt-4">
-                ₹{item.price}
-              </h1>
-              
-              <button
-                className={`w-full px-4 py-3 rounded-full cursor-pointer bg-[#04112d] text-sm mt-8 shrink-0 ${
-                  item.mostPopular
-                    ? "bg-gray-800 hover:bg-gray-900 text-white"
-                    : "border border-zinc-300/80 bg-zinc-100 hover:bg-zinc-200/70"
-                }`}
-              >
-                Get Started
-              </button>
-              
-
-              <div className="w-full mt-8 space-y-2.5 pb-4 grow overflow-y-auto">
-                {item.features.map((feature, index) => (
-                  <p
-                    key={index}
-                    className="flex items-center gap-3 text-sm text-zinc-500"
-                  >
-                    <span className="size-3 rounded-full bg-zinc-300 flex items-center justify-center shrink-0">
-                      <span className="size-1.5 rounded-full bg-zinc-800" />
-                    </span>
-                    {feature}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
+          <label className="cursor-pointer shrink-0">
+            <input
+              type="radio"
+              name="industry"
+              value="professional"
+              checked={industry === "professional"}
+              onChange={(e) => setIndustry(e.target.value)}
+              className="hidden peer"
+            />
+            <span className="px-4 py-2 text-sm rounded-full transition peer-checked:bg-[#04112d] peer-checked:text-white text-zinc-600">
+              Business Services
+            </span>
+          </label>
         </div>
-      </section>
-    </>
+      </div>
+
+      {/* Pricing Cards */}
+      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
+        {pricingData[industry]?.map((item, index) => (
+          <div
+            key={index}
+            className="border border-zinc-200 rounded-2xl p-6 flex flex-col bg-white min-h-130 transition duration-300 hover:-translate-y-1 hover:shadow-lg"
+          >
+            <h2 className="font-semibold text-3xl text-slate-800">
+              {item.name}
+            </h2>
+
+            <p className="text-sm text-zinc-500 mt-2 h-10">
+              {item.description}
+            </p>
+
+            <h3 className="font-semibold text-5xl text-slate-900 mt-6">
+              ₹{item.price}
+            </h3>
+
+            <button className="w-full px-4 py-3 rounded-full cursor-pointer text-sm mt-8 border border-zinc-300 text-white bg-[#04112d] hover:bg-[#1a397d] transition">
+              Get Started
+            </button>
+
+            <div className="w-full mt-8 space-y-3 grow">
+              {item.features.map((feature, i) => (
+                <p
+                  key={i}
+                  className="flex items-center gap-3 text-sm text-zinc-600"
+                >
+                  <span className="size-3 rounded-full bg-zinc-300 flex items-center justify-center shrink-0">
+                    <span className="size-1.5 rounded-full bg-zinc-800" />
+                  </span>
+
+                  {feature}
+                </p>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 
