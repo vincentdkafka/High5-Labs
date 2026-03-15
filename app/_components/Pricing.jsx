@@ -139,7 +139,7 @@ const Pricing = () => {
           Choose a plan that supports your business growth and digital goals.
         </p>
 
-        <div className="mt-6 flex gap-3 bg-zinc-100 p-2 rounded-full overflow-x-auto whitespace-nowrap sm:overflow-visible sm:whitespace-normal">
+        <div className="mt-6 flex gap-3 bg-zinc-100 p-2 rounded-full overflow-x-auto whitespace-nowrap sm: px-10 overflow-visible sm:whitespace-normal">
   <label className="cursor-pointer shrink-0">
     <input
       type="radio"
@@ -201,7 +201,7 @@ const Pricing = () => {
               key={index}
              
               className={`border cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start w-full h-136 transition duration-300 hover:-translate-y-1 ${
-                item.mostPopular ? "bg-gray-100" : "bg-white"
+                item.mostPopular ? "bg-white" : "bg-white"
               }`}
             >
               <h1 className="font-medium text-3xl text-slate-800 mt-1">
