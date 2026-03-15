@@ -139,68 +139,68 @@ const Pricing = () => {
           Choose a plan that supports your business growth and digital goals.
         </p>
 
-        <div className="mt-6 flex gap-3 bg-zinc-100 p-2 rounded-full">
-          <label className="cursor-pointer">
-            <input
-              type="radio"
-              name="industry"
-              value="restaurant"
-              checked={industry === "restaurant"}
-              onChange={(e) => setIndustry(e.target.value)}
-              className="hidden peer"
-            />
-            <span
-              className="px-4 py-2 text-s rounded-full transition
-    peer-checked:bg-[#04112d] peer-checked:text-white
-    text-zinc-600"
-            >
-              Local Businesses
-            </span>
-          </label>
+        <div className="mt-6 flex gap-3 bg-zinc-100 p-2 rounded-full overflow-x-auto whitespace-nowrap sm:overflow-visible sm:whitespace-normal">
+  <label className="cursor-pointer shrink-0">
+    <input
+      type="radio"
+      name="industry"
+      value="restaurant"
+      checked={industry === "restaurant"}
+      onChange={(e) => setIndustry(e.target.value)}
+      className="hidden peer"
+    />
+    <span
+      className="px-4 py-2 text-sm rounded-full transition
+      peer-checked:bg-[#04112d] peer-checked:text-white
+      text-zinc-600"
+    >
+      Local Businesses
+    </span>
+  </label>
 
-          <label className="cursor-pointer">
-            <input
-              type="radio"
-              name="industry"
-              value="hospital"
-              checked={industry === "hospital"}
-              onChange={(e) => setIndustry(e.target.value)}
-              className="hidden peer"
-            />
-            <span
-              className="px-4 py-2 text-s rounded-full transition
-    peer-checked:bg-[#04112d] peer-checked:text-white
-    text-zinc-600"
-            >
-              Healthcare & Legal
-            </span>
-          </label>
+  <label className="cursor-pointer shrink-0">
+    <input
+      type="radio"
+      name="industry"
+      value="hospital"
+      checked={industry === "hospital"}
+      onChange={(e) => setIndustry(e.target.value)}
+      className="hidden peer"
+    />
+    <span
+      className="px-4 py-2 text-sm rounded-full transition
+      peer-checked:bg-[#04112d] peer-checked:text-white
+      text-zinc-600"
+    >
+      Healthcare & Legal
+    </span>
+  </label>
 
-          <label className="cursor-pointer">
-            <input
-              type="radio"
-              name="industry"
-              value="professional"
-              checked={industry === "professional"}
-              onChange={(e) => setIndustry(e.target.value)}
-              className="hidden peer"
-            />
-            <span
-              className="px-4 py-2 text-s rounded-full transition
-    peer-checked:bg-[#04112d] peer-checked:text-white
-    text-zinc-600"
-            >
-              Professional Services
-            </span>
-          </label>
-        </div>
+  <label className="cursor-pointer shrink-0">
+    <input
+      type="radio"
+      name="industry"
+      value="professional"
+      checked={industry === "professional"}
+      onChange={(e) => setIndustry(e.target.value)}
+      className="hidden peer"
+    />
+    <span
+      className="px-4 py-2 text-sm rounded-full transition
+      peer-checked:bg-[#04112d] peer-checked:text-white
+      text-zinc-600"
+    >
+      Professional Services
+    </span>
+  </label>
+</div>
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
           {pricingData[industry].map((item, index) => (
             <div
               key={index}
-              // Changed from min-h to a strict h-[620px] to completely lock the size
-              className={`border cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start w-full h-132 transition duration-300 hover:-translate-y-1 ${
+             
+              className={`border cursor-pointer border-zinc-200 rounded-2xl p-6 flex flex-col items-start w-full h-136 transition duration-300 hover:-translate-y-1 ${
                 item.mostPopular ? "bg-gray-100" : "bg-white"
               }`}
             >
