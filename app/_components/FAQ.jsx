@@ -64,14 +64,14 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => toggle(index)}
-                  className="flex justify-between items-center w-full text-left"
+                  className="flex justify-between cursor-pointer items-center w-full text-left"
                 >
                   <span className="font-semibold text-lg text-gray-800 dark:text-white">
                     {faq.question}
                   </span>
 
                   <ChevronDown
-                    className={`w-5 h-5 transition-transform duration-300 ${
+                    className={`w-5 h-5 transition-transform cursor-pointer duration-300 ${
                       active === index ? "rotate-180" : ""
                     }`}
                   />

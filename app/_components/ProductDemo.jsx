@@ -198,7 +198,7 @@ const ProductDemo = () => {
             <button
               onClick={handleSubmit}
               disabled={loading}
-              className="w-full md:w-auto px-12 py-4 bg-[#FEFBF6] text-[#04112d] rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(254,251,246,0.4)] active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex justify-center items-center gap-3"
+              className="w-full md:w-auto cursor-pointer px-12 py-4 bg-[#FEFBF6] text-[#04112d] rounded-full font-bold text-lg hover:bg-white transition-all transform hover:-translate-y-1 hover:shadow-[0_10px_40px_-10px_rgba(254,251,246,0.4)] active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex justify-center items-center gap-3"
             >
               {loading ? (
                 <>
@@ -327,9 +327,9 @@ const ProductDemo = () => {
                 <div className="flex justify-center mt-6">
                   <button
                     onClick={handleFormspreeSubmit}
-                    className="px-8 py-3 bg-[#04112d] text-white rounded-full font-semibold hover:scale-105 transition-all shadow-lg"
+                    className="px-8 cursor-pointer py-3 bg-[#04112d] text-white rounded-full font-semibold hover:scale-105 transition-all shadow-lg"
                   >
-                    Lets work on it
+                    Lets work on it 
                   </button>
 
                   {/* {submitted && (
