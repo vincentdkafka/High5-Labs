@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
-import { Analytics } from '@vercel/analytics/next';
+import { Analytics } from "@vercel/analytics/next";
+import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -15,9 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={poppins.className} 
-      >
+      <body className={poppins.className}>
+        <Toaster position="bottom-right" />
+
         {children}
         <Analytics />
       </body>

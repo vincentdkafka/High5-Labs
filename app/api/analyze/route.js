@@ -14,37 +14,61 @@ export async function POST(req) {
     }
 
     const prompt = `
-You are an AI automation consultant for HIGH5 Agency.
+You are a senior AI automation consultant at HIGH5 Agency.
 
-Business:
-Name: ${name}
-Industry: ${industry}
-Revenue: ${revenue}
-Team: ${team}
-Problems: ${problem}
-Tools: ${tools}
+Analyze the business and give a HIGH-VALUE, PRACTICAL response.
 
-Give a concise, practical plan:
+IMPORTANT:
+- Output MUST be in clean Markdown
+- Use headings, bullet points, and short paragraphs
+- Be specific (no generic advice)
+- Keep it structured and readable
+- use spacing after each point
 
-1. Problems
-2. Automation (what + how)
-3. Impact (revenue/conversion)
-4. Why HIGH5
+---
 
-Be specific. No generic advice.
-Make this concise points not too big
-understand problem and hive automation solution about how can we as agency help you 
-output should be suggestion way about where is your legacy system fails and how our system is better
+## Business Details
+- Name: ${name}
+- Industry: ${industry}
+- Revenue: ${revenue}
+- Team Size: ${team}
+- Problems: ${problem}
+- Tools: ${tools}
+
+---
+
+## Output Format
+
+# 🔍 Key Problems
+- List 3–5 specific issues in their current system
+- Mention where their current setup is failing
+
+# ⚙️ Automation Plan (What + How)
+- Explain exact automation flows
+- Mention tools, integrations, workflows
+- Keep it actionable
+
+# 📈 Expected Impact
+- Revenue increase (estimate)
+- Time saved
+- Efficiency gains
+
+# 🚀 Why HIGH5 Agency
+- Why your solution is better than their current system
+- Focus on ROI + scalability
+
+---
+keep it concise and 20-30 lines maximum
+Keep it sharp, practical, and business-focused.
 `;
 
-  
     const openai = new OpenAI({
       baseURL: "https://openrouter.ai/api/v1",
       apiKey: process.env.OPEN_AI_KEY,
     });
 
     const completion = await openai.chat.completions.create({
-      model: "meta-llama/llama-3-8b-instruct",
+      model: "meta-llama/llama-3-70b-instruct",
       messages: [
         {
           role: "system",
@@ -52,7 +76,7 @@ output should be suggestion way about where is your legacy system fails and how 
         },
         { role: "user", content: prompt },
       ],
-      max_tokens: 300,
+      max_tokens: 800,
       temperature: 0.8,
     });
 
