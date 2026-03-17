@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
 
 const Pricing = () => {
@@ -202,9 +203,14 @@ const Pricing = () => {
               ₹{item.price}
             </h3>
 
+
+
+<Link href="/demo"
+>
             <button className="w-full px-4 py-3 rounded-full cursor-pointer text-sm mt-8 border border-zinc-300 text-white bg-[#04112d] hover:bg-[#1a397d] transition">
-              Get Started
+              Book a demo 
             </button>
+</Link>
 
             <div className="w-full mt-8 space-y-3 grow">
               {item.features.map((feature, i) => (

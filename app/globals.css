@@ -2,6 +2,14 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+.input {
+  @apply w-full p-3 rounded-lg bg-zinc-800 text-white border border-zinc-700;
+}
+
+.btn {
+  @apply w-full bg-white text-black py-3 rounded-lg font-semibold hover:opacity-90;
+}
+
 html {
   scroll-behavior: smooth;
   font-size: 90%;
